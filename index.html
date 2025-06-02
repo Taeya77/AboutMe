@@ -389,6 +389,14 @@
                 <li>Musik yang cocok dengan suasana hati</li>
             </ul>
         </section>
+        <footer style="text-align: center; margin-top: 3rem; color: var(--primary); font-size: 0.9rem; opacity: 0.9;">
+            &copy; <span id="copyright-year"></span> Taeya. All rights reserved.
+        </footer>
+        
+        <script>
+            // Auto update copyright year
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        </script>
     </div>
 </body>
 </html>
