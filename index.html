@@ -395,7 +395,17 @@
         
         <script>
             // Auto update copyright year
-            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+            document.addEventListener('DOMContentLoaded', function() {
+                const startYear = 2025;
+                const currentYear = new Date().getFullYear();
+                const copyrightElement = document.getElementById('copyright-year');
+                
+                if (currentYear === startYear) {
+                    copyrightElement.textContent = startYear;
+                } else {
+                    copyrightElement.textContent = `${startYear}-${currentYear}`;
+                }
+            });
         </script>
     </div>
 </body>
